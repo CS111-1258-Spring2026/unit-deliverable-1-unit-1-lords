@@ -27,9 +27,8 @@
 * Discription: This program calculates the projected financial
 * growth and estimates the user adaption based on current market trends.
 */
-public class Main 
+public class Main
 {
-
   /***** CONSTANT SECTION *****/
   public static final String TOPIC = "VR Marketet Growth";
   public static final double GROWTH_PERCENT = 0.25;
@@ -45,10 +44,10 @@ public class Main
     currentMarketValue = 105;   // starting at $105 Billion in 2026
     currentYear = 2026;
     yearsToForcast = 5;
-    
+
     /***** INTRO SECTION *****/
-System.out.println("\n\nProject: " + TOPIC);
-System.out.println("Starting Year: " + currentYear);
+    System.out.println("\n\nProject: " + TOPIC);
+    System.out.println("Starting Year: " + currentYear);
 
 
     /***** PROCESSING SECTION *****/
@@ -56,32 +55,31 @@ System.out.println("Starting Year: " + currentYear);
     totalFutureValue = currentMarketValue + growthAmount;
 
     /***** OUTPUT SECTION *****/
-System.out.printf("Curent market: $%.0f Billion\n", currentMarketValue);
-System.out.println("Estimated to gro to $" + growthAmount + " Billion, by the end of next year.");
-System.out.println("And in " + yearsToForcast + " years");
-System.out.printf("The Total Projected Value is $%.2f Billion\n", totalFutureValue);
+    System.out.printf("Curent market: $%.0f Billion\n", currentMarketValue);
+    System.out.println("Estimated to gro to $" + growthAmount + " Billion, by the end of next year.");
+    System.out.println("And in " + yearsToForcast + " years");
+    System.out.printf("The Total Projected Value is $%.2f Billion\n", totalFutureValue);
 
     displayMarketStatus(totalFutureValue);
 
   }
-    /***** STATIC METHODS *****/
+  /***** STATIC METHODS *****/
 
-    // DESCRIPTION: Calculates the dollar amount of growth.
-    // PRECONDITION: baseVale, rate, and years must all be greater than 0.
-    // POSTCONDITION: Returns the total growth amount as a double.
-    public static double calculateIncrease (double baseValue, double rate, int years) {
+  // DESCRIPTION: Calculates the dollar amount of growth.
+  // PRECONDITION: baseVale, rate, and years must all be greater than 0.
+  // POSTCONDITION: Returns the total growth amount as a double.
+  public static double calculateIncrease (double baseValue, double rate, int years) {
     return (baseValue * rate)* years;
     }
 
-    // DESCRIPTION: Displays a status message.
-    // PRECONDIDION: finalSatus requires double to function correctly due to (totalFutureValue)
-    // POSTCONDITION: Prints status to consel.
-    public static void displayMarketStatus(double finalStatus) {
-    System.out.println("--- Market Status ---");
-    System.out.println("The VR Sector is showing strong upward movement!!\n\n");
+  // DESCRIPTION: Displays a status message.
+  // PRECONDIDION: finalSatus requires double to function correctly due to (totalFutureValue)
+  // POSTCONDITION: Prints status to consel.
+public static void displayMarketStatus(double finalStatus) {
+System.out.println("--- Market Status ---");
+System.out.println("The VR Sector is showing strong upward movement!!\n\n");
 
     }
- 
 
- 
+    
 }
