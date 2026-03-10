@@ -1,1 +1,87 @@
+/********************************************
+*	AUTHORS: Jonathan Smith
+* COLLABORATORS: <name of peer, tutor, instructor, anyone else who helped>
+*	LAST MODIFIED:	March 3rd
+********************************************/
 
+/********************************************
+*	<TITLE OF PROGRAM>
+*********************************************
+*	PROGRAM DESCRIPTION:
+*	<1-2 sentences describing overall program>
+*********************************************
+*	ALGORITHM:
+*	<Pseudocode here>
+*********************************************
+*	STATIC METHODS:
+* <list of static methods and which teammate made each>
+* 1. calculateIncrease: Compute growth amount based on rate (Jonathan Smith)
+* 2. displaySafetyNote: Outputs a text analysis of the final total (Jonathan Smith)
+*********************************************/
+
+
+//https://www.grandviewresearch.com/industry-analysis/virtual-reality-vr-market
+
+/* *
+* Topic: VR Growth and Marktet Projections
+* Discription: This program calculates the projected financial
+* growth and estimates the user adaption based on current market trends.
+*/
+public class Main 
+{
+
+  /***** CONSTANT SECTION *****/
+  public static final String TOPIC = "VR Marketet Growth";
+  public static final double GROWTH_PERCENT = 0.25;
+  public static void main(String[] args){
+  
+    /***** DECLARATION SECTION *****/
+    double currentMarketValue, growthAmount;
+    double totalFutureValue;
+    int currentYear, yearsToForcast;
+  
+
+    /***** INITIALIZATION SECTION *****/
+    currentMarketValue = 105;   // starting at $105 Billion in 2026
+    currentYear = 2026;
+    yearsToForcast = 5;
+    
+    /***** INTRO SECTION *****/
+System.out.println("\n\nProject: " + TOPIC);
+System.out.println("Starting Year: " + currentYear);
+
+
+    /***** PROCESSING SECTION *****/
+    growthAmount = calculateIncrease(currentMarketValue, GROWTH_PERCENT, yearsToForcast);
+    totalFutureValue = currentMarketValue + growthAmount;
+
+    /***** OUTPUT SECTION *****/
+System.out.printf("Curent market: $%.0f Billion\n", currentMarketValue);
+System.out.println("Estimated to gro to $" + growthAmount + " Billion, by the end of next year.");
+System.out.println("And in " + yearsToForcast + " years");
+System.out.printf("The Total Projected Value is $%.2f Billion\n", totalFutureValue);
+
+    displayMarketStatus(totalFutureValue);
+
+  }
+    /***** STATIC METHODS *****/
+
+    // DESCRIPTION: Calculates the dollar amount of growth.
+    // PRECONDITION: baseVale, rate, and years must all be greater than 0.
+    // POSTCONDITION: Returns the total growth amount as a double.
+    public static double calculateIncrease (double baseValue, double rate, int years) {
+    return (baseValue * rate)* years;
+    }
+
+    // DESCRIPTION: Displays a status message.
+    // PRECONDIDION: finalSatus requires double to function correctly due to (totalFutureValue)
+    // POSTCONDITION: Prints status to consel.
+    public static void displayMarketStatus(double finalStatus) {
+    System.out.println("--- Market Status ---");
+    System.out.println("The VR Sector is showing strong upward movement!!\n\n");
+
+    }
+ 
+
+ 
+}
