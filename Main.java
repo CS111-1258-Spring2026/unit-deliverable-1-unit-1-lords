@@ -33,8 +33,8 @@ public class Main
   /***** CONSTANT SECTION *****/
   public static final String TOPIC = "VR Marketet Growth";
   public static final double GROWTH_PERCENT = 0.25;
-  public static void main(String[] args)
-  {
+  public static void main(String[] args){
+  
     /***** DECLARATION SECTION *****/
     double currentMarketValue, growthAmount;
     double totalFutureValue;
